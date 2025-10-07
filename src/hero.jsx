@@ -9,6 +9,16 @@ const Hero = () => {
       className='relative min-h-screen flex items-center overflow-hidden'
     >
       <div className='absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-black'>
+        {/* Background Image with Opacity */}
+        <div
+          className='absolute inset-0 bg-cover bg-center opacity-50'
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?q=80&w=2070&auto=format&fit=crop')",
+          }}
+        ></div>
+        {/* Black Overlay for High Contrast */}
+        <div className='absolute inset-0 bg-black/60'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(245,158,11,0.1),transparent_50%)]'></div>
       </div>
 
