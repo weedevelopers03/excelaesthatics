@@ -14,7 +14,7 @@ const Hero = () => {
           className='absolute inset-0 bg-cover bg-center opacity-30'
           style={{
             backgroundImage:
-              "url('https://github.com/weedevelopers03/excelaesthatics/blob/main/src/images/2150879681.jpg?raw=true')",
+              "url('http://www.excelaestheticsmiami.com/wp-content/uploads/2020/12/home-top-sec.png')",
           }}
         ></div>
         {/* Black Overlay for High Contrast */}
