@@ -1,3 +1,4 @@
+import About from './about.jsx'
 import Contact from './contact.jsx'
 import Footer from './footer.jsx'
 import Hero from './hero.jsx'
@@ -23,6 +24,7 @@ const App = () => {
       `}</style>
       <Navbar />
       <Hero />
+      <About />
       <TreatmentsCarousel />
       <Services />
       <MarqueeBanner />

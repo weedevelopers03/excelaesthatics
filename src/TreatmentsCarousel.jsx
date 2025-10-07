@@ -5,14 +5,46 @@ const TreatmentsCarousel = () => {
   const [itemsPerSlide, setItemsPerSlide] = useState(4)
 
   const treatments = [
-    { name: 'Botox Clinic', image: 'botox' },
-    { name: 'Rhinoplasty', image: 'rhinoplasty' },
-    { name: 'Dermatology & Skin Care', image: 'dermatology' },
-    { name: 'Chemical Peels', image: 'chemical-peels' },
-    { name: 'Laser Treatments', image: 'laser' },
-    { name: 'Facial Fillers', image: 'fillers' },
-    { name: 'Body Contouring', image: 'body-contouring' },
-    { name: 'Hair Restoration', image: 'hair-restoration' },
+    {
+      name: 'Botox Clinic',
+      image:
+        'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop',
+    },
+    {
+      name: 'Rhinoplasty',
+      image:
+        'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop',
+    },
+    {
+      name: 'Dermatology & Skin Care',
+      image:
+        'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop',
+    },
+    {
+      name: 'Chemical Peels',
+      image:
+        'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=2069&auto=format&fit=crop',
+    },
+    {
+      name: 'Laser Treatments',
+      image:
+        'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop',
+    },
+    {
+      name: 'Facial Fillers',
+      image:
+        'https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?q=80&w=2070&auto=format&fit=crop',
+    },
+    {
+      name: 'Body Contouring',
+      image:
+        'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2020&auto=format&fit=crop',
+    },
+    {
+      name: 'Hair Restoration',
+      image:
+        'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1974&auto=format&fit=crop',
+    },
   ]
 
   const handleBooking = () => {
@@ -100,13 +132,23 @@ const TreatmentsCarousel = () => {
                         <div className='relative h-64 bg-neutral-800 overflow-hidden'>
                           <div className='absolute inset-0 grid grid-cols-2'>
                             <div className='relative overflow-hidden'>
-                              <div className='absolute inset-0 bg-gradient-to-br from-neutral-700 to-neutral-800 opacity-60'></div>
+                              <img
+                                src={treatment.image}
+                                alt={`${treatment.name} before`}
+                                className='absolute inset-0 w-full h-full object-cover opacity-60'
+                              />
+                              <div className='absolute inset-0 bg-gradient-to-br from-neutral-700/40 to-neutral-900/60'></div>
                               <div className='absolute top-2 left-2 text-xs uppercase tracking-wider bg-neutral-950/80 px-2 py-1 text-neutral-300'>
                                 Before
                               </div>
                             </div>
                             <div className='relative overflow-hidden border-l-2 border-amber-600/50'>
-                              <div className='absolute inset-0 bg-gradient-to-br from-amber-900/20 to-neutral-800 opacity-60'></div>
+                              <img
+                                src={treatment.image}
+                                alt={`${treatment.name} after`}
+                                className='absolute inset-0 w-full h-full object-cover'
+                              />
+                              <div className='absolute inset-0 bg-gradient-to-br from-amber-900/10 to-amber-600/20'></div>
                               <div className='absolute top-2 right-2 text-xs uppercase tracking-wider bg-neutral-950/80 px-2 py-1 text-neutral-300'>
                                 After
                               </div>

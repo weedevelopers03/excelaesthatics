@@ -11,7 +11,7 @@ const Hero = () => {
       <div className='absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-black'>
         {/* Background Image with Opacity */}
         <div
-          className='absolute inset-0 bg-cover bg-center opacity-50'
+          className='absolute inset-0 bg-cover bg-center opacity-30'
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?q=80&w=2070&auto=format&fit=crop')",
@@ -19,7 +19,7 @@ const Hero = () => {
         ></div>
         {/* Black Overlay for High Contrast */}
         <div className='absolute inset-0 bg-black/60'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(245,158,11,0.1),transparent_50%)]'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(245,158,11,0.1),transparent_50%)]'></div>
       </div>
 
       <div className='container mx-auto px-6 relative z-10'>
