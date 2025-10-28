@@ -1,10 +1,21 @@
+// src/PromotionalBanner.jsx
+import promoBg from 'file:///Users/ismaanwar/Desktop/excelaesthatics/src/images/promo.jpg' // same background as Hero
+
 const PromotionalBanner = () => {
   const handleBooking = () => {
     window.open('https://excelaesthetics.square.site/', '_blank')
   }
+
   return (
     <section className='relative min-h-[600px] flex items-center justify-end overflow-hidden bg-neutral-200'>
-      <div className='absolute inset-0 bg-gradient-to-r from-neutral-400/40 to-transparent'></div>
+      {/* Background image with light opacity */}
+      <div
+        className='absolute inset-0 bg-cover bg-center opacity-25'
+        style={{ backgroundImage: `url(${promoBg})` }}
+      ></div>
+
+      {/* Gradient overlay (keeps readability and color tone) */}
+      <div className='absolute inset-0 bg-gradient-to-r from-black/70 via-black/80 to-black/90'></div>
 
       {/* Content - Right Side */}
       <div className='relative z-10 max-w-2xl mr-12 md:mr-24 text-right px-6'>
@@ -28,7 +39,7 @@ const PromotionalBanner = () => {
 
         <button
           onClick={handleBooking}
-          className='bg-[#c8b5d8] hover:bg-[#b8a5c8] text-neutral-900 px-10 py-4 uppercase tracking-wider font-semibold text-sm transition-all'
+          className='bg-orange-200 hover:bg-orange-300 text-neutral-900 px-10 py-4 uppercase tracking-wider font-semibold text-sm transition-all'
         >
           Book Free Consultation
         </button>
@@ -36,4 +47,5 @@ const PromotionalBanner = () => {
     </section>
   )
 }
+
 export default PromotionalBanner

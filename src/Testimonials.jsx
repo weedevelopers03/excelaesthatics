@@ -90,7 +90,7 @@ const Testimonials = () => {
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <svg
                           key={i}
-                          className='w-6 h-6 text-amber-600 fill-current'
+                          className='w-6 h-6 text-orange-200 fill-current'
                           viewBox='0 0 24 24'
                         >
                           <path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' />
@@ -104,7 +104,7 @@ const Testimonials = () => {
 
                     <div className='flex items-center justify-center'>
                       <div className='w-12 h-12 rounded-full bg-amber-600/20 flex items-center justify-center mr-4'>
-                        <span className='text-amber-600 font-semibold text-lg'>
+                        <span className='text-orange-200 font-semibold text-lg'>
                           {testimonial.author.charAt(0)}
                         </span>
                       </div>
@@ -120,7 +120,7 @@ const Testimonials = () => {
 
           <button
             onClick={prevTestimonial}
-            className='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-amber-600 hover:bg-amber-500 text-neutral-950 flex items-center justify-center transition-all z-10'
+            className='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-orange-200 hover:bg-orange-300 text-neutral-950 flex items-center justify-center transition-all z-10'
             aria-label='Previous testimonial'
           >
             <svg
@@ -139,7 +139,7 @@ const Testimonials = () => {
           </button>
           <button
             onClick={nextTestimonial}
-            className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-amber-600 hover:bg-amber-500 text-neutral-950 flex items-center justify-center transition-all z-10'
+            className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-orange-200 hover:bg-orange-300 text-neutral-950 flex items-center justify-center transition-all z-10'
             aria-label='Next testimonial'
           >
             <svg
@@ -165,7 +165,7 @@ const Testimonials = () => {
               onClick={() => setTestimonialIndex(index)}
               className={`h-2 rounded-full transition-all ${
                 index === testimonialIndex
-                  ? 'w-8 bg-amber-600'
+                  ? 'w-8 bg-orange-200'
                   : 'w-2 bg-neutral-700 hover:bg-neutral-600'
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
@@ -178,7 +178,7 @@ const Testimonials = () => {
             href='https://www.google.com/maps/place/Excel+Aesthetics/@25.893,-80.208,17z'
             target='_blank'
             rel='noopener noreferrer'
-            className='inline-flex items-center gap-2 bg-transparent border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-neutral-950 px-8 py-3 uppercase tracking-wider font-semibold text-sm transition-all'
+            className='inline-flex items-center gap-2 bg-transparent border-2 border-orange-200 text-orange-200 hover:bg-orange-300 hover:text-neutral-950 px-8 py-3 uppercase tracking-wider font-semibold text-sm transition-all'
           >
             <svg className='w-5 h-5' viewBox='0 0 24 24' fill='currentColor'>
               <path d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z' />

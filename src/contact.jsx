@@ -28,7 +28,7 @@ const Contact = () => {
         <div className='text-center max-w-3xl mx-auto mb-16'>
           <h2 className='text-4xl md:text-5xl font-normal mb-6 uppercase tracking-tight'>
             <span className='text-neutral-100'>Get In </span>
-            <span className='text-amber-600'>Touch</span>
+            <span className='text-orange-200'>Touch</span>
           </h2>
           <p className='text-base text-neutral-400 leading-relaxed'>
             Ready to begin your aesthetic journey? Schedule your free
@@ -45,7 +45,7 @@ const Contact = () => {
             <div className='space-y-6'>
               <div className='flex items-start space-x-4'>
                 <div className='flex-shrink-0 w-12 h-12 rounded-full bg-amber-600/10 flex items-center justify-center'>
-                  <MapPin className='w-5 h-5 text-amber-600' />
+                  <MapPin className='w-5 h-5 text-orange-200' />
                 </div>
                 <div>
                   <h4 className='font-semibold mb-1 text-neutral-100'>
@@ -55,19 +55,23 @@ const Contact = () => {
                     15490 NW 7th Ave, Suite 210
                     <br />
                     Miami, FL 33169
+                    <br />
+                    <br />
+                    15190 SW 136th St Ste 19 <br />
+                    Miami, FL 33196
                   </p>
                 </div>
               </div>
 
               <div className='flex items-start space-x-4'>
-                <div className='flex-shrink-0 w-12 h-12 rounded-full bg-amber-600/10 flex items-center justify-center'>
-                  <Phone className='w-5 h-5 text-amber-600' />
+                <div className='flex-shrink-0 w-12 h-12 rounded-full bg-orange-200/10 flex items-center justify-center'>
+                  <Phone className='w-5 h-5 text-orange-200' />
                 </div>
                 <div>
                   <h4 className='font-semibold mb-1 text-neutral-100'>Phone</h4>
                   <a
                     href='tel:+13053103160'
-                    className='text-neutral-400 hover:text-amber-600 transition-colors text-sm'
+                    className='text-neutral-400 hover:text-orange-300 transition-colors text-sm'
                   >
                     (305) 310-3160
                   </a>
@@ -75,14 +79,14 @@ const Contact = () => {
               </div>
 
               <div className='flex items-start space-x-4'>
-                <div className='flex-shrink-0 w-12 h-12 rounded-full bg-amber-600/10 flex items-center justify-center'>
-                  <Mail className='w-5 h-5 text-amber-600' />
+                <div className='flex-shrink-0 w-12 h-12 rounded-full bg-orange-200/10 flex items-center justify-center'>
+                  <Mail className='w-5 h-5 text-orange-200' />
                 </div>
                 <div>
                   <h4 className='font-semibold mb-1 text-neutral-100'>Email</h4>
                   <a
                     href='mailto:excelaesthetics1@gmail.com'
-                    className='text-neutral-400 hover:text-amber-600 transition-colors text-sm'
+                    className='text-neutral-400 hover:text-orange-300 transition-colors text-sm'
                   >
                     excelaesthetics1@gmail.com
                   </a>
@@ -91,7 +95,7 @@ const Contact = () => {
 
               <div className='flex items-start space-x-4'>
                 <div className='flex-shrink-0 w-12 h-12 rounded-full bg-amber-600/10 flex items-center justify-center'>
-                  <Clock className='w-5 h-5 text-amber-600' />
+                  <Clock className='w-5 h-5 text-orange-200' />
                 </div>
                 <div>
                   <h4 className='font-semibold mb-1 text-neutral-100'>Hours</h4>
@@ -109,7 +113,7 @@ const Contact = () => {
                 onClick={() =>
                   window.open('https://instagram.com/excelaesthetics', '_blank')
                 }
-                className='w-10 h-10 rounded-full bg-amber-600/10 hover:bg-amber-600 hover:text-neutral-950 flex items-center justify-center transition-all text-amber-600'
+                className='w-10 h-10 rounded-full bg-amber-600/10 hover:bg-orange-200 hover:text-neutral-950 flex items-center justify-center transition-all text-orange-200'
                 aria-label='Instagram'
               >
                 <Instagram className='w-5 h-5' />
@@ -118,7 +122,7 @@ const Contact = () => {
                 onClick={() =>
                   window.open('https://facebook.com/excelaesthetics', '_blank')
                 }
-                className='w-10 h-10 rounded-full bg-amber-600/10 hover:bg-amber-600 hover:text-neutral-950 flex items-center justify-center transition-all text-amber-600'
+                className='w-10 h-10 rounded-full bg-amber-600/10 hover:bg-orange-300 hover:text-neutral-950 flex items-center justify-center transition-all text-orange-200'
                 aria-label='Facebook'
               >
                 <Facebook className='w-5 h-5' />
@@ -144,7 +148,7 @@ const Contact = () => {
                       setFormData({ ...formData, firstName: e.target.value })
                     }
                     placeholder='John'
-                    className='w-full bg-neutral-950 border border-neutral-800 px-4 py-3 text-neutral-100 focus:border-amber-600 focus:outline-none transition-colors'
+                    className='w-full bg-neutral-950 border border-neutral-800 px-4 py-3 text-neutral-100 focus:border-orange-300 focus:outline-none transition-colors'
                   />
                 </div>
                 <div>
@@ -192,7 +196,7 @@ const Contact = () => {
                     setFormData({ ...formData, phone: e.target.value })
                   }
                   placeholder='(305) 123-4567'
-                  className='w-full bg-neutral-950 border border-neutral-800 px-4 py-3 text-neutral-100 focus:border-amber-600 focus:outline-none transition-colors'
+                  className='w-full bg-neutral-950 border border-neutral-800 px-4 py-3 text-neutral-100 focus:border-orange-300 focus:outline-none transition-colors'
                 />
               </div>
 
@@ -208,13 +212,13 @@ const Contact = () => {
                   }
                   placeholder='Tell us about your aesthetic goals...'
                   rows={5}
-                  className='w-full bg-neutral-950 border border-neutral-800 px-4 py-3 text-neutral-100 focus:border-amber-600 focus:outline-none transition-colors resize-none'
+                  className='w-full bg-neutral-950 border border-neutral-800 px-4 py-3 text-neutral-100 focus:border-orange-300 focus:outline-none transition-colors resize-none'
                 />
               </div>
 
               <button
                 onClick={handleSubmit}
-                className='w-full bg-amber-600 text-neutral-950 hover:bg-amber-500 uppercase tracking-wider text-xs font-semibold py-4 transition-colors'
+                className='w-full bg-orange-200 text-neutral-950 hover:bg-orange-300 uppercase tracking-wider text-xs font-semibold py-4 transition-colors'
               >
                 Book Free Consultation
               </button>

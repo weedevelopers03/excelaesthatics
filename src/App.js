@@ -1,11 +1,9 @@
-import About from './about.jsx'
 import Contact from './contact.jsx'
 import Footer from './footer.jsx'
 import Hero from './hero.jsx'
 import MarqueeBanner from './MarqueeBanner.jsx'
 import Navbar from './navbar.jsx'
 import Newsletter from './Newsletter.jsx'
-import PaymentPlans from './PaymentPlans.jsx'
 import PromotionalBanner from './PromotionalBanner.jsx'
 import Services from './Services.jsx'
 import Team from './Team.jsx'
@@ -25,14 +23,12 @@ const App = () => {
       `}</style>
       <Navbar />
       <Hero />
-      <About />
       <TreatmentsCarousel />
       <Services />
       <MarqueeBanner />
       <PromotionalBanner />
       <Team />
       <Testimonials />
-      <PaymentPlans />
       <Newsletter />
       <Contact />
       <Footer />

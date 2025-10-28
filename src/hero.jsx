@@ -1,3 +1,6 @@
+// src/hero.jsx
+import heroBg from 'file:///Users/ismaanwar/Desktop/excelaesthatics/src/images/home-top-sec.png'
+
 const Hero = () => {
   const handleBooking = () => {
     window.open('https://excelaesthetics.square.site/', '_blank')
@@ -8,20 +11,18 @@ const Hero = () => {
       id='home'
       className='relative min-h-screen flex items-center overflow-hidden'
     >
-      <div className='absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-black'>
-        {/* Background Image with Opacity */}
-        <div
-          className='absolute inset-0 bg-cover bg-center opacity-30'
-          style={{
-            backgroundImage:
-              "url('http://www.excelaestheticsmiami.com/wp-content/uploads/2020/12/home-top-sec.png')",
-          }}
-        ></div>
-        {/* Black Overlay for High Contrast */}
-        <div className='absolute inset-0 bg-black/60'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(245,158,11,0.1),transparent_50%)]'></div>
+      {/* Background image with light opacity */}
+      <div
+        className='absolute inset-0 bg-cover bg-center opacity-60'
+        style={{ backgroundImage: `url(${heroBg})` }}
+      ></div>
+
+      {/* Dark gradient overlay */}
+      <div className='absolute inset-0 bg-gradient-to-br from-black via-neutral-950 to-black opacity-90'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(245,158,11,0.1),transparent_50%)]'></div>
       </div>
 
+      {/* Content */}
       <div className='container mx-auto px-6 relative z-10'>
         <div className='max-w-2xl pt-20'>
           <h1 className='text-5xl md:text-6xl lg:text-7xl font-normal leading-tight mb-8'>
@@ -31,7 +32,7 @@ const Hero = () => {
             <span className='block text-neutral-100 uppercase tracking-tight'>
               Winning
             </span>
-            <span className='block text-amber-600 uppercase tracking-tight mt-2'>
+            <span className='block text-orange-200 uppercase tracking-tight mt-2'>
               Cosmetic Clinic
             </span>
           </h1>
@@ -44,7 +45,7 @@ const Hero = () => {
           <div className='flex flex-col sm:flex-row gap-4'>
             <button
               onClick={handleBooking}
-              className='bg-amber-600 text-neutral-950 hover:bg-amber-500 uppercase tracking-wider text-sm px-8 py-4 transition-colors'
+              className='bg-orange-200 text-neutral-950 hover:bg-orange-300 uppercase tracking-wider text-sm px-8 py-4 transition-colors'
             >
               Free Consultation
             </button>
