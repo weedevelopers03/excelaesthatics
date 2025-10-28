@@ -18,7 +18,7 @@ const Hero = () => {
       ></div>
 
       {/* Dark gradient overlay */}
-      <div className='absolute inset-0 bg-gradient-to-br from-black via-neutral-950 to-black opacity-90'>
+      <div className='absolute inset-0 bg-gradient-to-br from-black via-neutral-950 to-black opacity-80'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(245,158,11,0.1),transparent_50%)]'></div>
       </div>
 
