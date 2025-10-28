@@ -1,5 +1,5 @@
 // src/hero.jsx
-import heroBg from 'file:///Users/ismaanwar/Desktop/excelaesthatics/src/images/home-top-sec.png'
+import heroBg from '/images/home-top-sec.png'
 
 const Hero = () => {
   const handleBooking = () => {

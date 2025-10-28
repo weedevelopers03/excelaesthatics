@@ -1,5 +1,5 @@
 // src/PromotionalBanner.jsx
-import promoBg from 'file:///Users/ismaanwar/Desktop/excelaesthatics/src/images/promo.jpg' // same background as Hero
+import promoBg from '/images/promo.jpg' // same background as Hero
 
 const PromotionalBanner = () => {
   const handleBooking = () => {
