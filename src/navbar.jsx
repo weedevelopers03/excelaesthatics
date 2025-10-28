@@ -1,4 +1,12 @@
-import { Facebook, Instagram, MapPin, Menu, Phone, X } from 'lucide-react'
+import {
+  Facebook,
+  Instagram,
+  MapPin,
+  Menu,
+  Phone,
+  ShoppingCart,
+  X,
+} from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const Navbar = () => {
@@ -105,12 +113,12 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <a
-                href='/payment-plans'
+              <button
+                onClick={() => (window.location.href = '/payment-plans')}
                 className='text-xs tracking-widest text-neutral-300 hover:text-amber-600 transition-colors uppercase font-medium'
               >
                 Payment Plans
-              </a>
+              </button>
             </div>
 
             {/* Center - Logo */}
@@ -133,7 +141,12 @@ const Navbar = () => {
                 <Phone className='w-4 h-4 mr-2' />
                 <span className='text-xs tracking-wider'>(305) 310-3160</span>
               </a>
-
+              <button className='relative text-neutral-300 hover:text-amber-600 transition-colors'>
+                <ShoppingCart className='w-5 h-5' />
+                <span className='absolute -top-2 -right-2 bg-amber-600 text-neutral-950 text-xs rounded-full w-4 h-4 flex items-center justify-center font-semibold'>
+                  0
+                </span>
+              </button>
               <button
                 onClick={handleBooking}
                 className='border-2 border-neutral-700 hover:border-amber-600 hover:bg-amber-600 text-neutral-100 hover:text-neutral-950 uppercase tracking-widest text-xs font-semibold px-8 py-2.5 transition-all'
@@ -171,13 +184,15 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a
-              href='/payment-plans'
-              className='block text-sm tracking-wide text-white hover:text-amber-600 transition-colors uppercase'
-              onClick={() => setIsMobileMenuOpen(false)}
+            <button
+              onClick={() => {
+                window.location.href = '/payment-plans'
+                setIsMobileMenuOpen(false)
+              }}
+              className='block text-sm tracking-wide text-white hover:text-amber-600 transition-colors uppercase text-left w-full'
             >
               Payment Plans
-            </a>
+            </button>
             <a
               href='tel:+13053103160'
               className='flex items-center text-neutral-300 hover:text-amber-600 transition-colors pt-4 border-t border-neutral-800'

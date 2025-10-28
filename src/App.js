@@ -5,6 +5,7 @@ import Hero from './hero.jsx'
 import MarqueeBanner from './MarqueeBanner.jsx'
 import Navbar from './navbar.jsx'
 import Newsletter from './Newsletter.jsx'
+import PaymentPlans from './PaymentPlans.jsx'
 import PromotionalBanner from './PromotionalBanner.jsx'
 import Services from './Services.jsx'
 import Team from './Team.jsx'
@@ -31,6 +32,7 @@ const App = () => {
       <PromotionalBanner />
       <Team />
       <Testimonials />
+      <PaymentPlans />
       <Newsletter />
       <Contact />
       <Footer />
