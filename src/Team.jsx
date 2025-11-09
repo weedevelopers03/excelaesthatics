@@ -17,16 +17,6 @@ const staff = [
     title: 'Co-founder, CEO, Skin Specialist',
     image: '/images/team/sindy-franco.jpg',
   },
-  {
-    name: 'Alexandra',
-    title: 'APRN, Aesthetic Specialist',
-    image: '/images/team/alexandra.jpg',
-  },
-  {
-    name: 'Yapsis Valdes',
-    title: 'Aesthetic Specialist',
-    image: '/images/team/yapsis-valdes.jpg',
-  },
 ]
 
 const Team = () => {

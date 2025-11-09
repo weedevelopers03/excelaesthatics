@@ -14,10 +14,9 @@ const Navbar = () => {
   }, [])
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   const handleBooking = () => {
@@ -105,7 +104,7 @@ const Navbar = () => {
 
             {/* Center - Logo */}
             <a
-              href='#home'
+              href='/'
               className='flex items-center space-x-2 lg:relative lg:left-0 lg:transform-none absolute left-1/2 transform -translate-x-1/2'
             >
               <div className='text-2xl font-light tracking-[0.3em]'>

@@ -100,9 +100,9 @@ const Contact = () => {
                 <div>
                   <h4 className='font-semibold mb-1 text-neutral-100'>Hours</h4>
                   <p className='text-neutral-400 text-sm'>
-                    Mon - Fri: 11:00 AM - 7:00 PM
+                    Tue - Fri: 10:00 AM - 06:00 PM
                     <br />
-                    Sat - Sun: By Appointment
+                    Sat: 09:00 AM - 03:00 PM
                   </p>
                 </div>
               </div>
