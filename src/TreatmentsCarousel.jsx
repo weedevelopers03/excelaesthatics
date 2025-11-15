@@ -32,7 +32,6 @@ const TreatmentsCarousel = ({ items }) => {
     []
   )
 
-  // ====== State ======
   const [itemsPerSlide, setItemsPerSlide] = useState(4)
   const [index, setIndex] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
