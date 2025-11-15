@@ -5,17 +5,17 @@ const staff = [
   {
     name: 'Joseph Durandis',
     title: 'Medical Director',
-    image: '/images/team/joseph-durandis.jpg',
+    image: '/images/team2.webp',
   },
   {
     name: 'Yalysher Acevedo',
     title: 'DNP, CRNA, FNP-BC, Aesthetics Specialist',
-    image: '/images/team/yalysher-acevedo.jpg',
+    image: '/images/team1.jpg',
   },
   {
     name: 'Sindy Franco',
     title: 'Co-founder, CEO, Skin Specialist',
-    image: '/images/team/sindy-franco.jpg',
+    image: '/images/team3.webp',
   },
 ]
 
