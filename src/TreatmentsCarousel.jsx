@@ -5,7 +5,7 @@ import img4 from './/images/7F692B95-3592-4D42-9CDB-EE830F53EE34.jpg'
 import img5 from './/images/91D06AB8-D599-4D8C-BB87-74B67F691540.jpg'
 import img2 from './/images/Beige Minimalist Bold Beauty Skincare Before After Collage Instagram Post.png'
 import img6 from './/images/IMG_4744.PNG'
-import img7 from './/images/Minimalist Transformation Before + After Facebook Post.png'
+import img7 from './/images/imageba.png'
 
 const TreatmentsCarousel = ({ items }) => {
   // ====== Data ======
