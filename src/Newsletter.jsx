@@ -3,6 +3,9 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
 const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY
 
+console.log('SUPABASE URL:', supabaseUrl)
+console.log('SUPABASE KEY present:', !!supabaseAnonKey)
+
 let supabase = null
 try {
   if (supabaseUrl && supabaseAnonKey) {
@@ -20,10 +23,6 @@ const Newsletter = () => {
     const input = e.target.previousElementSibling
     const email = input?.value?.trim()
 
-    if (!email) {
-      alert('Please enter your email address')
-      return
-    }
     const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
     if (!ok) {
       alert('Please enter a valid email address')

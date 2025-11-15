@@ -1,6 +1,21 @@
+import { createClient } from '@supabase/supabase-js'
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
 import { useState } from 'react'
 
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
+const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY
+
+let supabase = null
+try {
+  if (supabaseUrl && supabaseAnonKey) {
+    supabase = createClient(supabaseUrl, supabaseAnonKey)
+  } else {
+    console.warn('Supabase env vars missing. Contact form will still render.')
+  }
+} catch (e) {
+  console.error('Supabase init failed:', e)
+  supabase = null
+}
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -10,16 +25,66 @@ const Contact = () => {
     message: '',
   })
 
-  const handleSubmit = () => {
-    console.log('Form submitted:', formData)
-    alert('Thank you for your interest! We will contact you soon.')
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      message: '',
-    })
+  const handleSubmit = async (e) => {
+    e?.preventDefault?.()
+
+    const { firstName, lastName, email, phone, message } = formData
+
+    // Basic validation
+    if (!firstName || !lastName || !email) {
+      alert('Please fill in your first name, last name and email.')
+      return
+    }
+
+    const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    if (!ok) {
+      alert('Please enter a valid email address.')
+      return
+    }
+
+    // If Supabase not ready, don't crash
+    if (!supabase) {
+      alert('Message saved locally. Supabase is not configured yet.')
+      console.warn('Supabase client not available. Check env vars and keys.')
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+      })
+      return
+    }
+
+    try {
+      const { error } = await supabase.from('contacts').insert([
+        {
+          first_name: firstName,
+          last_name: lastName,
+          email,
+          phone,
+          message,
+        },
+      ])
+
+      if (error) {
+        console.error('Contact insert error:', error)
+        alert('Supabase error: ' + error.message)
+        return
+      }
+
+      alert('Thank you for your interest! We will contact you soon.')
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+      })
+    } catch (err) {
+      console.error('Network error:', err)
+      alert('Network error: ' + err.message)
+    }
   }
 
   return (
