@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Contact from './contact.jsx'
 import Footer from './footer.jsx'
 import Hero from './hero.jsx'
+import InstagramReels from './InstagramReels.jsx'
 import MarqueeBanner from './MarqueeBanner.jsx'
 import Navbar from './navbar.jsx'
 import Newsletter from './Newsletter.jsx'
@@ -44,6 +45,7 @@ const App = () => {
                   <Team />
                   <Testimonials />
                   <Newsletter />
+                  <InstagramReels />
                   <Contact />
                 </>
               }
