@@ -1,14 +1,22 @@
+import img3 from './/images/564917128_18159622483401300_3600426120556078171_n.jpg'
+import img4 from './/images/580125073_32791397150458545_8475534834586436465_n.jpg'
+import img2 from './/images/581720484_1182442897379115_5192937350280351542_n.jpg'
+
 // 1) Put **real reel URLs** here (open a reel on IG → copy link)
 // 2) Optionally add local thumbnail images if you want (or leave null and just use a gradient)
 const REELS = [
   {
-    url: 'https://www.instagram.com/reel/DRA8XTnjqL6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', // replace
+    url: 'https://www.instagram.com/reel/DRA8XTnjqL6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    thumbnail: img3,
+    // replace
   },
   {
     url: 'https://www.instagram.com/reel/DRADssFDgA2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    thumbnail: img2,
   },
   {
-    url: 'https://www.instagram.com/reel/DQ_upXYEa-f/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    url: 'https://www.instagram.com/reel/DQ6gkWFjNhu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    thumbnail: img4,
   },
 ]
 
@@ -34,7 +42,7 @@ const InstagramReels = () => {
               rel='noopener noreferrer'
               className='group rounded-sm overflow-hidden border border-neutral-800 bg-neutral-900 hover:border-orange-200/60 transition-colors'
             >
-              <div className='relative aspect-[9/16] overflow-hidden'>
+              <div className='relative aspect-[3/5] overflow-hidden'>
                 {reel.thumbnail ? (
                   <div
                     className='w-full h-full bg-cover bg-center'

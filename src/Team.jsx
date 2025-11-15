@@ -1,21 +1,24 @@
 // src/Team.jsx
 import { Facebook, Instagram } from 'react-feather'
+import img1 from './/images/team1.jpg'
+import img2 from './/images/team2.webp'
+import img3 from './/images/team3.webp'
 
 const staff = [
   {
     name: 'Joseph Durandis',
     title: 'Medical Director',
-    image: './images/team2.webp',
+    image: img2,
   },
   {
     name: 'Yalysher Acevedo',
     title: 'DNP, CRNA, FNP-BC, Aesthetics Specialist',
-    image: './images/team1.jpg',
+    image: img1,
   },
   {
     name: 'Sindy Franco',
     title: 'Co-founder, CEO, Skin Specialist',
-    image: './images/team3.webp',
+    image: img3,
   },
 ]
 

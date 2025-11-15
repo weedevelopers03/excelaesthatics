@@ -1,30 +1,23 @@
 // src/TreatmentsCarousel.jsx
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import img3 from './/images/376E3BC0-702E-4A6D-A039-E57800C63FD4.jpg'
+import img4 from './/images/7F692B95-3592-4D42-9CDB-EE830F53EE34.jpg'
+import img5 from './/images/91D06AB8-D599-4D8C-BB87-74B67F691540.jpg'
+import img1 from './/images/Beige Brown Neutral Before + After Facebook Post.png'
+import img2 from './/images/Beige Minimalist Bold Beauty Skincare Before After Collage Instagram Post.png'
+import img6 from './/images/IMG_4744.PNG'
+import img7 from './/images/Minimalist Transformation Before + After Facebook Post.png'
 
 const TreatmentsCarousel = ({ items }) => {
   // ====== Data ======
-  // Provide your real images here if you are not passing "items" as a prop
   const treatments = items ?? [
-    {
-      name: 'Botox Clinic',
-      image: '/images/1.jpg',
-    },
-    {
-      name: 'Rhinoplasty',
-      image: '/images/2.jpg',
-    },
-    {
-      name: 'Dermatology & Skin Care',
-      image: '/images/3.jpg',
-    },
-    {
-      name: 'Chemical Peels',
-      image: '/images/4.jpg',
-    },
-    {
-      name: 'Laser Treatments',
-      image: '/images/5.jpg',
-    },
+    { name: 'Botox Clinic', image: img1 },
+    { name: 'Rhinoplasty', image: img2 },
+    { name: 'Dermatology & Skin Care', image: img3 },
+    { name: 'Chemical Peels', image: img4 },
+    { name: 'Laser Treatments', image: img5 },
+    { name: 'Body Contouring', image: img6 },
+    { name: 'Microneedling', image: img7 },
   ]
 
   // ====== Config ======
@@ -48,7 +41,9 @@ const TreatmentsCarousel = ({ items }) => {
   const touchStartX = useRef(null)
   const reducedMotion = useRef(false)
 
-  const totalSlides = Math.ceil(treatments.length / itemsPerSlide)
+  const totalCards = treatments.length
+  const maxIndex = Math.max(totalCards - itemsPerSlide, 0) // last starting position
+  const totalWindows = maxIndex + 1 // dots count
 
   // ====== Helpers ======
   const handleBooking = () => {
@@ -57,15 +52,15 @@ const TreatmentsCarousel = ({ items }) => {
 
   const clampIndex = useCallback(
     (i) => {
-      if (i < 0) return totalSlides - 1
-      if (i >= totalSlides) return 0
+      if (i < 0) return maxIndex
+      if (i > maxIndex) return 0
       return i
     },
-    [totalSlides]
+    [maxIndex]
   )
 
   const next = useCallback(() => {
-    setIndex((i) => clampIndex(i + 1))
+    setIndex((i) => clampIndex(i + 1)) // move by 1 card
   }, [clampIndex])
 
   const prev = useCallback(() => {
@@ -87,10 +82,10 @@ const TreatmentsCarousel = ({ items }) => {
     return () => window.removeEventListener('resize', update)
   }, [breakpoints])
 
-  // Guard index if slide count changes
+  // Guard index when itemsPerSlide changes
   useEffect(() => {
     setIndex((i) => clampIndex(i))
-  }, [itemsPerSlide, totalSlides, clampIndex])
+  }, [itemsPerSlide, clampIndex])
 
   // Respect reduced motion
   useEffect(() => {
@@ -116,7 +111,7 @@ const TreatmentsCarousel = ({ items }) => {
       document.removeEventListener('visibilitychange', onVisibility)
       clearInterval(timer)
     }
-  }, [autoplay, isHovering, autoplaySpeed, itemsPerSlide, next])
+  }, [autoplay, isHovering, autoplaySpeed, next])
 
   // Keyboard navigation
   useEffect(() => {
@@ -175,39 +170,34 @@ const TreatmentsCarousel = ({ items }) => {
             aria-live='polite'
             tabIndex={0}
           >
+            {/* Track: one long row, shift by 1 card each time */}
             <div
               className='flex transition-transform duration-500 ease-in-out'
-              style={{ transform: `translateX(-${index * 100}%)` }}
+              style={{
+                transform: `translateX(-${index * (100 / itemsPerSlide)}%)`,
+              }}
             >
-              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                <div key={slideIndex} className='min-w-full flex'>
-                  {treatments
-                    .slice(
-                      slideIndex * itemsPerSlide,
-                      slideIndex * itemsPerSlide + itemsPerSlide
-                    )
-                    .map((treatment, i) => (
-                      <button
-                        type='button'
-                        key={`${slideIndex}-${i}`}
-                        className='relative group cursor-pointer px-2'
-                        style={{ width: `${100 / itemsPerSlide}%` }}
-                        onClick={handleBooking}
-                      >
-                        {/* Image card without center partition line */}
-                        <div className='relative h-64 md:h-72 lg:h-80 overflow-hidden rounded-sm bg-neutral-800'>
-                          <img
-                            src={treatment.image}
-                            alt={`before and after`}
-                            loading='lazy'
-                            className='w-full h-full object-cover transform group-hover:scale-[1.02] transition-transform duration-300'
-                          />
-                          {/* Optional subtle overlay for readability on hover */}
-                          <div className='absolute inset-0 bg-neutral-950/0 group-hover:bg-neutral-950/10 transition-colors duration-300' />
-                        </div>
-                      </button>
-                    ))}
-                </div>
+              {treatments.map((treatment, i) => (
+                <button
+                  type='button'
+                  key={i}
+                  className='relative group cursor-pointer px-2'
+                  style={{
+                    minWidth: `${100 / itemsPerSlide}%`,
+                    maxWidth: `${100 / itemsPerSlide}%`,
+                  }}
+                  onClick={handleBooking}
+                >
+                  <div className='relative h-96 md:h-72 lg:h-80 overflow-hidden rounded-sm bg-neutral-800'>
+                    <img
+                      src={treatment.image}
+                      alt='before and after'
+                      loading='lazy'
+                      className='w-full h-full object-cover transform group-hover:scale-[1.02] transition-transform duration-300'
+                    />
+                    <div className='absolute inset-0 bg-neutral-950/0 group-hover:bg-neutral-950/10 transition-colors duration-300' />
+                  </div>
+                </button>
               ))}
             </div>
           </div>
@@ -234,8 +224,7 @@ const TreatmentsCarousel = ({ items }) => {
           </button>
           <button
             onClick={next}
-            className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-orange-200 hover:bg-orange-200
-             text-neutral-950 flex items-center justify-center transition-all z-10 group'
+            className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-orange-200 hover:bg-orange-200 text-neutral-950 flex items-center justify-center transition-all z-10 group'
             aria-label='Next slide'
           >
             <svg
@@ -254,9 +243,9 @@ const TreatmentsCarousel = ({ items }) => {
           </button>
         </div>
 
-        {/* Dots */}
+        {/* Dots – one per starting position */}
         <div className='flex justify-center gap-2 mt-8' aria-label='Slide dots'>
-          {Array.from({ length: totalSlides }).map((_, i) => (
+          {Array.from({ length: totalWindows }).map((_, i) => (
             <button
               key={i}
               onClick={() => goTo(i)}
@@ -265,7 +254,7 @@ const TreatmentsCarousel = ({ items }) => {
                   ? 'w-8 bg-orange-200'
                   : 'w-2 bg-neutral-700 hover:bg-neutral-600'
               }`}
-              aria-label={`Go to slide ${i + 1}`}
+              aria-label={`Go to position ${i + 1}`}
               aria-current={i === index ? 'true' : 'false'}
             />
           ))}
