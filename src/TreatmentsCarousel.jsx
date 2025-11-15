@@ -3,7 +3,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import img3 from './/images/376E3BC0-702E-4A6D-A039-E57800C63FD4.jpg'
 import img4 from './/images/7F692B95-3592-4D42-9CDB-EE830F53EE34.jpg'
 import img5 from './/images/91D06AB8-D599-4D8C-BB87-74B67F691540.jpg'
-import img1 from './/images/Beige Brown Neutral Before + After Facebook Post.png'
 import img2 from './/images/Beige Minimalist Bold Beauty Skincare Before After Collage Instagram Post.png'
 import img6 from './/images/IMG_4744.PNG'
 import img7 from './/images/Minimalist Transformation Before + After Facebook Post.png'
@@ -11,7 +10,7 @@ import img7 from './/images/Minimalist Transformation Before + After Facebook Po
 const TreatmentsCarousel = ({ items }) => {
   // ====== Data ======
   const treatments = items ?? [
-    { name: 'Botox Clinic', image: img1 },
+    { name: 'Botox Clinic', image: img7 },
     { name: 'Rhinoplasty', image: img2 },
     { name: 'Dermatology & Skin Care', image: img3 },
     { name: 'Chemical Peels', image: img4 },
