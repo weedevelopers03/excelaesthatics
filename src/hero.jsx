@@ -27,10 +27,10 @@ const Hero = () => {
         <div className='max-w-2xl pt-20'>
           <h1 className='text-5xl md:text-6xl lg:text-7xl font-normal leading-tight mb-8'>
             <span className='block text-neutral-100 uppercase tracking-tight'>
-              Multi-Award
+              Miami’s Leading
             </span>
             <span className='block text-neutral-100 uppercase tracking-tight'>
-              Winning
+              Non-Surgical
             </span>
             <span className='block text-orange-200 uppercase tracking-tight mt-2'>
               Cosmetic Clinic
@@ -38,8 +38,8 @@ const Hero = () => {
           </h1>
 
           <p className='text-base md:text-lg text-neutral-400 mb-10 max-w-xl leading-relaxed'>
-            5-Star Medispa bringing the latest treatments, carried out by the
-            most experienced aesthetic practitioners in the industry.
+            Medical Aesthetics Center & Primary Care Practices located in Miami,
+            FL
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4'>
