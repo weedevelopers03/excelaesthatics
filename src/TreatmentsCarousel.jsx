@@ -11,7 +11,7 @@ import img7 from './/images/Minimalist Transformation Before + After Facebook Po
 const TreatmentsCarousel = ({ items }) => {
   // ====== Data ======
   const treatments = items ?? [
-    { name: 'Botox Clinic', image: img1 },
+    { name: 'Botox Clinic', image: img7 },
     { name: 'Rhinoplasty', image: img2 },
     { name: 'Dermatology & Skin Care', image: img3 },
     { name: 'Chemical Peels', image: img4 },
