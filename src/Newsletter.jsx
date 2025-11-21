@@ -77,10 +77,10 @@ const Newsletter = () => {
           </svg>
         </div>
 
-        <h2 className='text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 uppercase tracking-wide'>
+        <h2 className='text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 uppercase tracking-wide'>
           Sign Up For Our Newsletter
         </h2>
-        <h3 className='text-4xl md:text-5xl lg:text-6xl font-light text-white mb-8 uppercase tracking-wide'>
+        <h3 className='text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-8 uppercase tracking-wide'>
           And Special Events
         </h3>
 
@@ -89,7 +89,7 @@ const Newsletter = () => {
           treatment.
         </p>
 
-        <div className='max-w-2xl mx-auto flex flex-col sm:flex-row gap-4 justify-center'>
+        <div className='max-w-2xl mx-auto flex flex-row sm:flex-col gap-4 justify-center'>
           <input
             type='email'
             placeholder='Your Email*'
