@@ -38,8 +38,7 @@ const Hero = () => {
           </h1>
 
           <p className='text-base md:text-lg text-neutral-400 mb-10 max-w-xl leading-relaxed'>
-            Medical Aesthetics Center & Primary Care Practices located in Miami,
-            FL
+            Medical Aesthetics and Wellness Center Located in Miami, FL
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4'>

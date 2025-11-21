@@ -6,34 +6,27 @@ const Services = () => {
   const allServices = [
     // Consults
     {
-      name: 'Virtual Consult',
-      price: 'Price varies',
-      duration: '15–30 mins',
-      description:
-        'Meet online to discuss goals, concerns, and the best treatment plan for you.',
-    },
-    {
-      name: 'In-Person Consult',
-      price: 'Price varies',
-      duration: '15–30 mins',
-      description:
-        'Face to face evaluation plus a personalized plan that fits your goals and timeline.',
-    },
-
-    // Weight loss and injections
-    {
       name: 'Weightloss Packages',
       price: 'Price varies',
       duration: '30 mins+',
       description:
-        'Structured medical weight management with coaching and progress checks.',
+        'Indulge in our exclusive Weightloss Packages tailored to meet your unique needs. Experience the benefits of mesotherapy injections, wood therapy, and velashape treatments, all designed to help you achieve your wellness goals. Book your appointment today and embark on a journey towards a healthier and happier you!',
     },
     {
-      name: 'Semaglutide Injections',
+      name: 'Virtual Consultation',
       price: 'Price varies',
-      duration: '15–30 mins',
+      duration: '30 mins',
       description:
-        'Once weekly GLP-1 support that reduces appetite and helps control cravings.',
+        'Unlock the power of personalized advice with our virtual consult service! Say goodbye to long waiting times and hello to convenient, time-saving solutions tailored just for you.',
+    },
+
+    // Weight loss and injections
+    {
+      name: 'Ultrasound Lymphatic Massages',
+      price: 'Price varies',
+      duration: '30 mins',
+      description:
+        'Experience the benefits of ultrasound lymphatic massages, a non-invasive service designed to stimulate lymphatic flow and promote overall wellness. This appointment-based therapy utilizes advanced ultrasound technology to help reduce swelling, improve circulation, and support your body’s natural detoxification process. Book your session today for a personalized approach to revitalizing your health and well-being.',
     },
     {
       name: 'Tirzepatide Injections',
@@ -43,308 +36,231 @@ const Services = () => {
         'Dual agonist medication for advanced appetite control and metabolic support.',
     },
     {
-      name: 'Beta Peptide Weight Loss Program',
+      name: 'Smooth & PDO Threads',
       price: 'Price varies',
-      duration: '30 mins+',
+      duration: '30 mins',
       description:
-        'Peptide based program that supports fat loss, energy, and metabolism.',
+        'Looking to achieve a more youthful appearance? Book an appointment for our PDO Threads service, where our skilled professionals will use Mint PDO threads to help tighten and lift your skin, giving you a refreshed and rejuvenated look. Don not wait any longer, schedule your appointment today!',
     },
 
     // Neurotoxin and fillers
     {
-      name: 'Botox',
+      name: 'Skinny Shot',
+      price: 'Price varies',
+      duration: '15 mins',
+      description:
+        'Boost your fat loss with our Skinny Shot! This powerful shot accelerates fat metabolism, converts carbs and sugars into energy, and speed up muscle recovery, making it perfect for enhancing your workouts and seeing quicker results. Get leaner and more energized with every session.',
+    },
+    {
+      name: 'Sermorelin Therapy',
       price: 'Price varies',
       duration: '30 mins',
       description:
-        'Softens lines on the forehead, between brows, and around the eyes for a smoother look.',
+        'Stimulate your body’s natural growth hormone production with sermorelin, a powerful peptide therapy designed to support deeper sleep, improved metabolism, fat loss, muscle recovery, and overall vitality. start your journey to balance hormones and healthy lifestyle today.',
     },
     {
-      name: 'Letybo',
+      name: 'Semaglutide Injections',
       price: 'Price varies',
       duration: '30 mins',
       description:
-        'Modern neurotoxin option to relax expression lines with natural results.',
+        'Experience personalized care with our Semaglutide Injection service, designed to help you manage blood sugar levels and achieve weight management goals.',
     },
     {
-      name: 'Fillers/Injectables',
+      name: 'Salmon DNA/PDRN',
       price: 'Price varies',
-      duration: '45–60 mins',
+      duration: '30 mins+',
       description:
-        'Add volume and contour to lips, cheeks, jawline, and more with premium fillers.',
-    },
-    {
-      name: 'Hylanex/Filler Reversal',
-      price: 'Price varies',
-      duration: '30 mins',
-      description:
-        'Dissolves unwanted filler safely and precisely for a reset or correction.',
+        'Experience our professional Salmon DNA/PDRN treatment, designed to promote skin regeneration and improve overall skin texture. Utilizing PDRN derived from salmon DNA, this service supports cellular repair and enhances hydration for a revitalized appearance. Book your one-on-one appointment today for a tailored session that prioritizes your skincare needs.',
     },
 
     // Skin and rejuvenation
     {
-      name: 'Chemical Peels',
+      name: 'Reta Triple G Weight Loss Program',
       price: 'Price varies',
-      duration: '30–45 mins',
+      duration: '30 mins',
       description:
-        'Target dullness, acne, and uneven tone for brighter and smoother skin.',
+        'Reta GLP 3 is a peptide designed to enhance weight loss by regulating appetite, increasing fat metabolism, and improving energy balance.  GLP-3 helps boost fat oxidation, enhancing the bodys ability to utilize stored fat for energy. This monthly service includes a weekly injection and titration of dosing by our providers guidance.',
     },
     {
       name: 'PRX - No-Peel Glow Facial',
       price: 'Price varies',
       duration: '30 mins',
       description:
-        'Biostimulatory facial that boosts radiance without flaking or downtime.',
+        'PRX is a no-peel treatment that stimulate collagen and elastin, improving fine lines, wrinkles, scars, and uneven skin tone, without downtime or peeling. Get firmer, brighter, radiant skin instantly.',
     },
     {
-      name: 'Microneedling',
+      name: 'Platelet-Rich Plasma',
       price: 'Price varies',
-      duration: '45–60 mins',
+      duration: '30 mins',
       description:
-        'Stimulates collagen to improve texture, pores, and acne scars.',
-    },
-    {
-      name: 'RF Microneedling',
-      price: 'Price varies',
-      duration: '60 mins',
-      description:
-        'Microneedling with radiofrequency for firmer skin and refined texture.',
-    },
-    {
-      name: 'PRP with Microneedling',
-      price: 'Price varies',
-      duration: '60 mins',
-      description:
-        'Combines your platelet rich plasma with microneedling for enhanced healing.',
-    },
-    {
-      name: 'Mesotherapy',
-      price: 'Price varies',
-      duration: '30–45 mins',
-      description:
-        'Micro injections of vitamins and actives to hydrate and refresh the skin.',
+        'PRP therapy is a medical treatment where a person’s blood is drawn, processed through a centrifuge, and then injected or topically placed with micro-needling. When your blood is drawn and centrifuged, it separates the platelet-poor plasma, platelet-rich plasma, and red blood cells. The treatment is combined with Microneedling. Plasma contains cytokines and growth factors that speed up the healing process of soft tissues. Indications include hair loss, uneven skin tone, stretch marks, enlarged pores, and collagen production. The process will then be repeated every 4-6 weeks. The number of sessions varies by patient. Consultation required to discuss treatment packages.',
     },
     {
       name: 'Peptide Therapy',
       price: 'Price varies',
-      duration: '15–30 mins',
+      duration: '30 mins',
       description:
-        'Peptide formulations that support skin health, recovery, and performance.',
+        'Peptide Therapy is designed to enhance recovery, support wellness and optimize body goals. These treatments use targeted peptides (short chains of amino acids) that work at a cellular level to improve energy, support tissue and joint repair, boost metabolism, reduce inflammation, stimulate natural growth hormone, and promote anti-aging benefits. Each peptide has specific functions, such as improving sleep quality, aiding fat loss, enhancing muscle development, accelerating healing, and rejuvenating skin.',
     },
     {
-      name: 'Skin Booster / Hydration',
+      name: 'NAD+ Therapy',
       price: 'Price varies',
       duration: '30 mins',
       description:
-        'Micro droplet hyaluronic treatment that boosts glow and deep hydration.',
+        'NAD and NAD+ are naturally occurring compounds in the body that play a key role in energy generation. NAD+ is especially important as it acts as a critical co-factor to enhance mitochondrial function. Mitochondria, often called the cell’s "energy powerhouses," convert micronutrients into ATP, the energy currency of our cells. As we age, NAD levels naturally decline due to reduced production and increased oxidative stress from environmental factors. This decline in NAD+ is linked to symptoms like fatigue, mental fog, dull skin, and poor sleep. Boosting NAD+ levels may support a broad range of health issues, from metabolic conditions like diabetes to more complex diseases like cancer.',
     },
     {
-      name: 'MADD Therapy',
+      name: 'Microneedling',
+      price: 'Price varies',
+      duration: '15 mins+',
+      description:
+        'Microneedling is the application of very fine short needles into the skin for the purposes of rejuvenation. Benefits of using microneedling are increased collagen, stimulate hair growth, reduce cellulite appearance, reduce enlarged pores, improve acne scars, improve texture and skin tone. Prior to your treatment it is recommended to have a facial. Total time includes numbing time.',
+    },
+    {
+      name: 'Microinfusion Facial (AquaGold Custom Cocktail)',
       price: 'Price varies',
       duration: '30 mins',
       description:
-        'Targeted therapy designed to calm irritation and support barrier recovery.',
+        'A luxurious, skin-revitalizing treatment that uses ultra-fine needles to deliver a customized blend of neurotoxin, hyaluronic acid, skin brightening, and vitamins directly into the skin for a radiant, smooth, and refreshed look.',
     },
     {
-      name: 'LED Light Therapy',
-      price: 'Price varies',
-      duration: '15–30 mins',
-      description:
-        'Red and blue light options to calm redness, improve acne, and support healing.',
-    },
-    {
-      name: 'Radiofrequency',
-      price: 'Price varies',
-      duration: '30–60 mins',
-      description:
-        'Tightens skin and improves laxity using controlled RF heat.',
-    },
-    {
-      name: 'Three For Me',
-      price: 'Price varies',
-      duration: '60 mins',
-      description:
-        'A two step laser approach that addresses tone, texture, and fine lines.',
-    },
-    {
-      name: 'Facials',
-      price: 'Price varies',
-      duration: '45–60 mins',
-      description:
-        'Customized clinical facials for deep cleansing, exfoliation, and glow.',
-    },
-
-    // Laser and devices
-    {
-      name: 'Laser Hair Removal',
-      price: 'Price varies',
-      duration: '15–60 mins',
-      description:
-        'Permanent hair reduction for face and body with advanced laser platforms.',
-    },
-    {
-      name: 'Laser IPL/Fractional',
-      price: 'Price varies',
-      duration: '30–60 mins',
-      description:
-        'Treats sun damage, redness, and texture for clearer, more even skin.',
-    },
-    {
-      name: 'Endolift/Endolaser',
-      price: 'Price varies',
-      duration: '60 mins',
-      description:
-        'Minimally invasive laser tightening for contour and skin firmness.',
-    },
-    {
-      name: 'TempSure Vitalia',
+      name: 'Mesotherapy',
       price: 'Price varies',
       duration: '30 mins',
       description:
-        'Radiofrequency treatment for intimate wellness and tissue rejuvenation.',
-    },
-    {
-      name: 'Roller Wave Treatment/Endosphere',
-      price: 'Price varies',
-      duration: '30–60 mins',
-      description:
-        'Mechanical microvibration therapy to smooth cellulite and improve circulation.',
-    },
-
-    // Body and contouring
-    {
-      name: 'Skin Tightening/Body Contouring',
-      price: 'Price varies',
-      duration: '30–60 mins',
-      description:
-        'Device based tightening and shaping for abdomen, arms, thighs, and more.',
-    },
-    {
-      name: 'Cellulite Reduction',
-      price: 'Price varies',
-      duration: '30–60 mins',
-      description:
-        'Targets dimpling and texture for a smoother body silhouette.',
+        'Experience the rejuvenating benefits of mesotherapy with our personalized treatment sessions. Target specific areas with this non-invasive procedure designed to enhance your skin’s natural beauty.',
     },
     {
       name: 'Liquid Lipo Injections',
       price: 'Price varies',
       duration: '30 mins',
       description:
-        'Injection lipolysis to reduce small pockets of stubborn fat.',
+        'Is a lipo-reducing and tightening solution formulated with 11 active ingredients that work in the more efficient oxidation of accumulated fat in those who need to lose more than 15 pounds. With its double shaping and toning action, it eliminates adipose tissue and tones the area where you work.',
     },
     {
-      name: 'Wood Therapy',
+      name: 'Letybo',
       price: 'Price varies',
-      duration: '30–60 mins',
+      duration: '30 mins',
       description:
-        'Manual contouring technique that promotes circulation and smoother shape.',
+        'Letybo is a Korean-made, FDA-approved botulinum toxin treatment used to reduce the appearance of dynamic facial wrinkles, such as frown lines, forehead lines, and crow feet. Quick, minimally invasive, and effective, Letybo helps you achieve a smoother, more youthful look with natural results.',
+    },
+    {
+      name: 'LED Light Therapy',
+      price: 'Price varies',
+      duration: '15–30 mins',
+      description:
+        'LED (light-emitting diode) light therapy is a non-invasive treatment that enters the skin’s layers to improve the skin. Red LED light therapy may reduce inflammation and stimulate the production of collagen, a protein responsible for younger-looking skin that diminishes with age, treatment for wrinkles Blue LED light therapy may destroy acne-causing bacteria (P. acnes). Yellow LED light for skin erythema, relieves redness',
+    },
+    {
+      name: 'L-Carnite Shots',
+      price: 'Price varies',
+      duration: '30 mins',
+      description:
+        'L-carnitine is an amino acid derivative that plays a crucial role in the body’s energy production processes. As an injectable supplement, L-carnitine has been employed to support various health conditions, including heart and circulatory issues, as well as to enhance athletic performance. Recently, it has gained prominence for its potential benefits in promoting weight loss and improving overall well-being.',
+    },
+    {
+      name: 'IV Therapy',
+      price: 'Price varies',
+      duration: '30 mins',
+      description:
+        'IV hydration package is our best-selling package. Customers rave about the Myers’ Cocktail helping them to alleviate symptoms of numerous illnesses and ailments. The Myers’ Cocktail is a natural boost for your immune system and can give you a burst of energy to stop you from feeling sluggish. This package is what we recommend for everything from hangovers to fatigue to the flu. It can even be used for recovery from an athletic event or chronic illnesses. The blast of vitamins and hydration can help with skin health and aid your weight loss regimen.',
+    },
+    {
+      name: 'In- person Consult',
+      price: 'Price varies',
+      duration: '30 mins',
+      description:
+        'Initial consult to discuss your needs and create a customized package. Consult pricing will be discounted from the service.',
+    },
+
+    // Laser and devices
+    {
+      name: 'Hylanex/ Filler Reversal',
+      price: 'Price varies',
+      duration: '30 mins',
+      description:
+        'Hylanex filler reversal is a professional service designed to dissolve hyaluronic acid-based dermal fillers safely and effectively. Ideal for individuals seeking to restore their natural look or adjust previous filler treatments, this procedure provides precise and reliable results. Administered by trained professionals, the service ensures comfort and long-lasting outcomes. ',
+    },
+    {
+      name: 'Hydrocortisone Injection',
+      price: 'Price varies',
+      duration: '30 mins',
+      description:
+        'Our professional and experienced medical team offers hydrocortisone injections for keloids as part of our appointment-based service.',
+    },
+    {
+      name: 'Hormone Replacement Therapy Pellets',
+      price: 'Price varies',
+      duration: '20 mins+',
+      description:
+        'Bioidentical Hormone Replacement Therapy (BHRT) using bioidentical pellets offers a natural and effective way to regulate hormone levels. This service provides a personalized approach with long-lasting results, ensuring consistent hormone delivery over time. Book an appointment to discuss your individual needs and experience a tailored solution for optimal wellness.',
+    },
+    {
+      name: 'Hair Restoration',
+      price: 'Price varies',
+      duration: '20 mins+',
+      description:
+        'Platelet-rich plasma (PRP) therapy for hair loss is a minimally invasive treatment that uses a person’s own blood to promote hair growth. PRP injections are rich in proteins called growth factors, which may stimulate dormant hair follicles when injected into the scalp, encouraging hair regeneration. Additional methods to enhance hair growth is mesotherapy with vitamins and/or exosomes. ',
+    },
+    {
+      name: 'Fillers/Injectables',
+      price: 'Price varies',
+      duration: '30 mins',
+      description:
+        'Fillers are a cosmetic injection the team at Excel Aesthetics use to enhance your beauty by improving facial contours and diminishing the appearance of lines and wrinkles. The fillers contain a gel-like substance that adds volume under your skin to help you achieve specific aesthetic goals. The team at Excel Aesthetics may recommend fillers to: Soften lines and creases Plump up thin lips Improve cheeks contours Fill in recessed scars Fix facial deformities Your specialist may also use fillers to add volume under your lids to remove the shadows that make you look tired and worn out. Consultation Required. Pricing based on 1ML. Block time includes numbing time.',
+    },
+
+    // Body and contouring
+    {
+      name: 'Facial Balancing',
+      price: 'Price varies',
+      duration: '30 mins+',
+      description:
+        'Facial Balancing is a personalized service designed to enhance facial symmetry and achieve natural, harmonious results. During your appointment, a skilled professional will assess your unique features and recommend tailored solutions to bring balance and proportionality to your appearance. Using advanced techniques, this service focuses on subtle adjustments that complement your natural beauty while maintaining a refreshed and balanced look. Perfect for individuals seeking expert guidance and precise enhancements.',
+    },
+    {
+      name: 'Endolaser Consult',
+      price: 'Price varies',
+      duration: '30 mins+',
+      description:
+        'Endolaser is a non-invasive treatment designed to promote skin tightening and reduce the appearance of wrinkles. This advanced laser-based procedure targets deep layers of the skin to stimulate collagen production, enhancing firmness and elasticity. Ideal for those seeking noticeable results without downtime, Endolaser offers a convenient solution for rejuvenating your appearance. Book your personalized appointment today to experience this innovative service.',
+    },
+    {
+      name: 'Botox',
+      price: 'Price varies',
+      duration: '15 mins+',
+      description:
+        'Rediscover your youthful glow with our Botox treatment. Say goodbye to wrinkles and hello to smoother, more radiant skin. Our long-lasting results will have you feeling confident and refreshed. ',
+    },
+    {
+      name: 'Biorepeel Rose',
+      price: 'Price varies',
+      duration: '30 mins',
+      description:
+        'Biorepeel Rose is specifically designed to lighten pigmentation in intimate areas such as underarms, bikini, inner thighs and buttocks.',
     },
 
     // Brows, lashes, lips
     {
-      name: 'Brow Design + Wax + Tint',
+      name: 'Biorepeel Gold',
       price: 'Price varies',
-      duration: '45 mins',
-      description: 'Shaping, waxing, and tinting for fuller and defined brows.',
-    },
-    {
-      name: 'Brow Lamination Package',
-      price: 'Price varies',
-      duration: '60 mins',
-      description: 'Sleek, lifted brows with long lasting hold and definition.',
-    },
-    {
-      name: 'Brows',
-      price: 'Price varies',
-      duration: '30–60 mins',
+      duration: '30 mins',
       description:
-        'Menu of brow services customized to your desired shape and shade.',
+        'Indulge in a luxurious skin rejuvenation experience with Biorepeel Gold – a top-tier service designed to revitalize your skin and unlock its natural radiance. Say goodbye to signs of aging as you pamper yourself with the finest natural ingredients.',
     },
     {
-      name: 'Lash Lift',
+      name: 'BioRepeel Blue',
       price: 'Price varies',
-      duration: '45–60 mins',
+      duration: '30 mins+',
       description:
-        'Natural lash curl and lift that opens the eyes and lasts for weeks.',
+        'Experience the transformative power of BioRepeel Blue, a safe and natural skincare service that offers more than just a gentle exfoliation. This innovative treatment is designed to minimize shedding and promote the reconstruction of collagen, leaving your skin with a brightening effect. Whether you are looking to rejuvenate your complexion or enhance your natural beauty, BioRepeel Blue is the perfect choice. ',
     },
     {
-      name: 'Lash Extensions',
+      name: 'B12 SHOT',
       price: 'Price varies',
-      duration: '90–120 mins',
+      duration: '10 mins+',
       description:
-        'Classic, hybrid, or volume sets for fuller and longer looking lashes.',
-    },
-    {
-      name: 'Lip Blushing',
-      price: 'Price varies',
-      duration: '120–150 mins',
-      description:
-        'Semi permanent lip tint that defines shape and enhances natural color.',
-    },
-
-    // Intimate and specialty
-    {
-      name: 'Intimate Whitening',
-      price: 'Price varies',
-      duration: '30–45 mins',
-      description:
-        'Brightens intimate areas safely with professional grade formulas.',
-    },
-    {
-      name: 'Post-Procedure Injection',
-      price: 'Price varies',
-      duration: '15 mins',
-      description:
-        'Comfort support after treatment as recommended by your provider.',
-    },
-    {
-      name: 'Skin Tag Removal',
-      price: 'Price varies',
-      duration: '15–30 mins',
-      description:
-        'Quick removal of benign skin tags in a clean clinical setting.',
-    },
-
-    // Wellness, IV and shots
-    {
-      name: 'IV Therapy',
-      price: 'Price varies',
-      duration: '45–60 mins',
-      description:
-        'Hydration and vitamins delivered intravenously for fast replenishment.',
-    },
-    {
-      name: 'B12 Shot',
-      price: 'Price varies',
-      duration: '15 mins',
-      description: 'Vitamin B12 boost for energy and metabolism support.',
-    },
-
-    // Medical
-    {
-      name: 'Hydrocortisone Injection',
-      price: 'Price varies',
-      duration: '15 mins',
-      description:
-        'Steroid injection to calm inflammation from select skin conditions.',
-    },
-
-    // Hair
-    {
-      name: 'Hair Restoration',
-      price: 'Price varies',
-      duration: '45–60 mins',
-      description:
-        'Treatments that support regrowth and scalp health for thicker looking hair.',
-    },
-
-    // Threads
-    {
-      name: 'Smooth & PDO Threads',
-      price: 'Price varies',
-      duration: '45–60 mins',
-      description:
-        'Lifting or smoothing threads to refine contours and stimulate collagen.',
+        'Revitalize your body and mind with our B12 Shot service. Feel a surge of energy as it boosts your natural vitality, while supporting brain health and improving your mood. ',
     },
   ]
 

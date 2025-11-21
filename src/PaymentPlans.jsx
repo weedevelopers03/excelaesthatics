@@ -1,4 +1,3 @@
-// src/PaymentPlans.jsx
 import { useEffect } from 'react'
 import creditImg from './images/credit.webp'
 
@@ -66,25 +65,25 @@ const PaymentPlans = () => {
     <section className='pt-32 pb-24 bg-neutral-950 text-neutral-100 min-h-screen'>
       <div className='container mx-auto px-6'>
         {/* CareCredit Banner */}
-        <div className='w-4/5 mb-10 m-auto'>
+        <div className='w-full sm:w-4/5 mb-10 m-auto'>
           <div className='rounded-xl overflow-hidden flex-col items-center'>
-            <div className='w-full bg-gradient-to-r from-[#0A7B6A] to-[#0E5C57] py-12 px-6 md:px-16 flex flex-row md:flex-row items-center gap-8 md:gap-12'>
+            <div className='w-full bg-gradient-to-r from-[#0A7B6A] to-[#0E5C57] py-12 px-6 md:px-16 flex flex-row sm:flex-col items-center gap-8 md:gap-12'>
               {/* Local Image */}
               <img
                 src={creditImg}
                 alt='CareCredit'
-                className='w-1/4 md:w-64 rounded-lg shadow-xl'
+                className='w-1/4 sm:w-64 rounded-lg shadow-xl'
               />
 
               {/* Text */}
-              <h2 className='text-white text-4xl md:text-4xl font-light text-center md:text-left leading-snug'>
+              <h2 className='text-white text-4xl sm:text-2xl md:text-4xl font-light text-center sm:text-left leading-snug'>
                 Now accepting CareCredit for your convenience!
               </h2>
             </div>
           </div>
         </div>
 
-        <div className='bg-neutral-900 rounded-md md:rounded-lg shadow-lg p-4 md:p-8'>
+        <div className='bg-neutral-900 rounded-md md:rounded-lg shadow-lg p-4 md:p-8 sm:p-0'>
           {/* Cherry fills this div with its own UI */}
           <div id='all' className='bg-neutral-900 rounded-md overflow-hidden' />
         </div>
