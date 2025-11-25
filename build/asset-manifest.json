@@ -1,15 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.97586ac9.js",
+    "main.css": "/static/css/main.30963025.css",
+    "main.js": "/static/js/main.e15c6c35.js",
     "static/js/453.d0f2dbee.chunk.js": "/static/js/453.d0f2dbee.chunk.js",
+    "static/media/Beige Minimalist Bold Beauty Skincare Before After Collage Instagram Post.png": "/static/media/Beige Minimalist Bold Beauty Skincare Before After Collage Instagram Post.3c7ea6c36a9f648c5150.png",
+    "static/media/IMG_4744.PNG": "/static/media/IMG_4744.eb25a46ec194f560441a.PNG",
+    "static/media/imageba.png": "/static/media/imageba.f9fde64e9535d0f21b6f.png",
+    "static/media/home-top-sec.png": "/static/media/home-top-sec.8c9c3ddb46e9022daba5.png",
+    "static/media/promo.jpg": "/static/media/promo.83da2d2154253661effb.jpg",
+    "static/media/376E3BC0-702E-4A6D-A039-E57800C63FD4.jpg": "/static/media/376E3BC0-702E-4A6D-A039-E57800C63FD4.af52871dc6095bd0a356.jpg",
+    "static/media/7F692B95-3592-4D42-9CDB-EE830F53EE34.jpg": "/static/media/7F692B95-3592-4D42-9CDB-EE830F53EE34.efa7c4a43307f5fabcd5.jpg",
+    "static/media/91D06AB8-D599-4D8C-BB87-74B67F691540.jpg": "/static/media/91D06AB8-D599-4D8C-BB87-74B67F691540.6313078d3b30686bf3ca.jpg",
+    "static/media/564917128___n.jpg": "/static/media/564917128_18159622483401300_3600426120556078171_n.3326e594deee3633a7e9.jpg",
+    "static/media/580125073___n.jpg": "/static/media/580125073_32791397150458545_8475534834586436465_n.4419b31ce5a1f3a8637f.jpg",
+    "static/media/581720484___n.jpg": "/static/media/581720484_1182442897379115_5192937350280351542_n.e1694950bcff573b914a.jpg",
+    "static/media/team1.jpg": "/static/media/team1.e402cbc9b1cec78b6dea.jpg",
+    "static/media/team3.webp": "/static/media/team3.3eda80701cab222ef958.webp",
+    "static/media/team2.webp": "/static/media/team2.76ceb2378d16439cabf9.webp",
+    "static/media/credit.webp": "/static/media/credit.d979d8eae383a52f0eda.webp",
     "index.html": "/index.html",
-    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.97586ac9.js.map": "/static/js/main.97586ac9.js.map",
+    "main.30963025.css.map": "/static/css/main.30963025.css.map",
+    "main.e15c6c35.js.map": "/static/js/main.e15c6c35.js.map",
     "453.d0f2dbee.chunk.js.map": "/static/js/453.d0f2dbee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.97586ac9.js"
+    "static/css/main.30963025.css",
+    "static/js/main.e15c6c35.js"
   ]
 }
