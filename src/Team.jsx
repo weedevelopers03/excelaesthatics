@@ -9,16 +9,22 @@ const staff = [
     name: 'Joseph Durandis',
     title: 'Medical Director',
     image: img2,
+    Instagram: 'https://www.instagram.com/jodurandis/',
+    Facebook: 'https://www.facebook.com/joseph.durandis',
   },
   {
     name: 'Yalysher Acevedo',
     title: 'DNP, CRNA, FNP-BC, Aesthetics Specialist',
     image: img1,
+    Instagram: 'https://www.instagram.com/sedates_and_rejuvenates/',
+    Facebook: 'https://www.facebook.com/yalysher.acevedo.5',
   },
   {
     name: 'Sindy Franco',
     title: 'Co-founder, CEO, Skin Specialist',
     image: img3,
+    Instagram: 'https://www.instagram.com/sindy32502/',
+    Facebook: 'https://www.facebook.com/',
   },
 ]
 
@@ -67,12 +73,7 @@ const Team = () => {
                 <div className='flex justify-center items-center space-x-4'>
                   <button
                     type='button'
-                    onClick={() =>
-                      window.open(
-                        'https://instagram.com/excelaesthetics',
-                        '_blank'
-                      )
-                    }
+                    onClick={() => window.open(member.Instagram, '_blank')}
                     className='w-10 h-10 rounded-full bg-amber-600/10 hover:bg-orange-300 hover:text-neutral-950 flex items-center justify-center transition-all text-orange-200'
                     aria-label='Instagram'
                   >
@@ -80,12 +81,7 @@ const Team = () => {
                   </button>
                   <button
                     type='button'
-                    onClick={() =>
-                      window.open(
-                        'https://facebook.com/excelaesthetics',
-                        '_blank'
-                      )
-                    }
+                    onClick={() => window.open(member.Facebook, '_blank')}
                     className='w-10 h-10 rounded-full bg-amber-600/10 hover:bg-orange-300 hover:text-neutral-950 flex items-center justify-center transition-all text-orange-200'
                     aria-label='Facebook'
                   >
