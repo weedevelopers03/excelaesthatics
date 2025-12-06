@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.30963025.css",
-    "main.js": "/static/js/main.e15c6c35.js",
+    "main.js": "/static/js/main.bcf2602a.js",
     "static/js/453.d0f2dbee.chunk.js": "/static/js/453.d0f2dbee.chunk.js",
     "static/media/Beige Minimalist Bold Beauty Skincare Before After Collage Instagram Post.png": "/static/media/Beige Minimalist Bold Beauty Skincare Before After Collage Instagram Post.3c7ea6c36a9f648c5150.png",
     "static/media/IMG_4744.PNG": "/static/media/IMG_4744.eb25a46ec194f560441a.PNG",
@@ -20,11 +20,11 @@
     "static/media/credit.webp": "/static/media/credit.d979d8eae383a52f0eda.webp",
     "index.html": "/index.html",
     "main.30963025.css.map": "/static/css/main.30963025.css.map",
-    "main.e15c6c35.js.map": "/static/js/main.e15c6c35.js.map",
+    "main.bcf2602a.js.map": "/static/js/main.bcf2602a.js.map",
     "453.d0f2dbee.chunk.js.map": "/static/js/453.d0f2dbee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30963025.css",
-    "static/js/main.e15c6c35.js"
+    "static/js/main.bcf2602a.js"
   ]
 }
